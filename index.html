@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /-->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Temperature Conversion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/script.js"></script>
+  </head>
+  <body id="bg1">
+    <header>
+      <p>The Temperature Conversion website</p>
+    </header>
+    <nav>
+      <div id="dark-navc" class="index-header animate-left flex-container">
+        <button
+          title="Convert to Celcius"
+          class="cel flex-item-left mode1"
+          role="button"
+          onclick="doble1()"
+        >
+          Celcius
+        </button>
+        <button
+          title="Convert to Fahrenheit"
+          class="far flex-item-right mode2"
+          role="button"
+          onclick="doble2()"
+        >
+          Fahrenheit
+        </button>
+        <button
+          onclick="darkLight()"
+          role="button"
+          class="mode3"
+          title="Mode"
+          id="btn1"
+        >
+          Dark
+        </button>
+      </div>
+    </nav>
+    <section>
+      <div>
+        <input
+          type="number"
+          id="celsius"
+          style="display: none"
+          placeholder="°C"
+        />
+      </div>
+    </section>
+    <section>
+      <div>
+        <input
+          type="number"
+          id="fahrenheit"
+          style="display: flex"
+          placeholder="°F"
+        />
+      </div>
+    </section>
+    <div>
+      <div id="sub-a" style="display: flex;">
+        <button
+          id="submision"
+          class="mode4"
+          onclick="konversiSuhu()"
+        >
+          Submit F
+        </button>
+      </div>
+      <div id="sub-b" style="display: none;">
+        <button
+          id="submision"
+          class="mode4"
+          onclick="konversiSuhu1()"
+        >
+          Submit C
+        </button>
+      </div>
+      <button id="Clear" class="mode5" onclick="resetInput()">Clear</button>
+    </div>
+    <main>
+      <div class="result-box">
+        <div id="result-id"></div>
+      </div>
+    </main>
+  </body>
+</html>
